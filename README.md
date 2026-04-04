@@ -1,22 +1,15 @@
-# OWID-style personal website package
+# Assignment 2
 
-This folder contains a single-page static website built from the uploaded Word draft and figure files.
+This repository contains our Assignment 2 submission in the form of a short data story website.
 
-## Files
+The project examines changes in crime in San Francisco during the pandemic. We use yearly trends, monthly interactive visualizations, and a burglary heatmap to show how crime patterns changed over time and across locations.
 
-- `index.html` — main article page
-- `styles.css` — page styling
-- `assets/yearly-trend.png` — static figure
-- `assets/interactive-plot.html` — embedded Plotly chart
-- `assets/burglary-heatmap.html` — embedded animated heatmap
+The website is hosted with GitHub Pages.
 
-## Publish options
+## Website
+GitHub Pages link: https://qqymarshtomp.github.io/02806-Group-Work/
 
-You can deploy this folder directly to:
-
-- GitHub Pages
-- Netlify
-- Vercel
-- Any static host
-
-Keep the `assets` folder next to `index.html`.
+## Repository structure
+- `index.html`: main webpage
+- `styles.css`: page styling
+- `assets/`: figures and interactive visualizations
