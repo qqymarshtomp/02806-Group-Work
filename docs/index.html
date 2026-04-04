@@ -1,1 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Changes in Crime in San Francisco During the Pandemic</title>
+  <meta name="description" content="An Our World in Data-inspired article page about changes in crime in San Francisco during the pandemic." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand__box">
+          <span>Crime</span>
+          <span>in Data</span>
+        </span>
+      </a>
+      <nav class="top-nav" aria-label="Primary">
+        <a href="#overview">Overview</a>
+        <a href="#monthly-patterns">Monthly patterns</a>
+        <a href="#spatial-patterns">Spatial patterns</a>
+        <a href="#notes">Notes</a>
+      </nav>
+    </div>
+  </header>
 
+  <main id="top">
+    <section class="hero">
+      <div class="hero__inner">
+        <p class="eyebrow">San Francisco crime and COVID-19</p>
+        <h1>Changes in Crime in San Francisco During the Pandemic</h1>
+        <p class="standfirst">
+          In 2020, daily life in San Francisco changed almost overnight. Streets emptied,
+          businesses closed, and people stayed at home. This page examines how those changes
+          were reflected in reported crime across time and space.
+        </p>
+        <div class="meta">
+          <span>Single-page article</span>
+          <span>OWID-inspired editorial layout</span>
+          <span>Interactive figures included</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="page-shell">
+      <aside class="page-nav" aria-label="On this page">
+        <div class="page-nav__inner">
+          <p class="page-nav__title">On this page</p>
+          <a href="#overview">What changed in 2020?</a>
+          <a href="#long-term-trends">Long-term trends</a>
+          <a href="#monthly-patterns">Monthly distribution</a>
+          <a href="#spatial-patterns">Burglary hotspots</a>
+          <a href="#notes">Notes and reuse</a>
+        </div>
+      </aside>
+
+      <article class="article">
+        <section id="overview">
+          <p>
+            To understand how crime changed during the pandemic, it helps to step back and look at the
+            longer time series first. Most crime categories in San Francisco had year-to-year variation,
+            but no sharp structural break before 2020. When COVID-19 restrictions began, several categories
+            changed at the same time.
+          </p>
+          <p>
+            Assault, robbery, and larceny theft fell relative to the previous year. Drug-related offenses
+            also declined, although this should not be read only as a behavioral change: it may also reflect
+            changes in policing and street-level enforcement during the early pandemic period. In contrast,
+            burglary, vehicle theft, and arson moved upward in early 2020, consistent with a shift in the
+            opportunities available to offenders.
+          </p>
+        </section>
+
+        <section id="long-term-trends">
+          <h2>Long-term trends show that 2020 was unusual, but not in the same way for every crime type</h2>
+          <p>
+            The figure below shows yearly incidents of Personal Focus Crimes from 2003 to 2025. The year 2020
+            is highlighted in red to mark the onset of COVID-19 restrictions. The visual pattern is mixed:
+            interpersonal crimes generally fell, while several property-related categories did not.
+          </p>
+
+          <figure class="figure-block">
+            <img src="assets/yearly-trend.png" alt="Yearly incidents of personal focus crimes in San Francisco from 2003 to 2025, with 2020 highlighted in red." />
+            <figcaption>
+              <strong>Figure 1.</strong> Yearly incidents of Personal Focus Crimes in San Francisco from 2003 to 2025.
+              The year 2020 is highlighted in red to mark the start of COVID-19 restrictions.
+            </figcaption>
+          </figure>
+
+          <p>
+            Aggregate yearly counts are useful, but they do not show when the changes happened within the year.
+            To study the lockdown period more directly, it is better to move from yearly totals to monthly patterns.
+          </p>
+        </section>
+
+        <section id="monthly-patterns">
+          <h2>Monthly patterns make the split between interpersonal and property crime easier to see</h2>
+          <p>
+            The interactive chart below shows the normalized monthly distribution of crimes from 2003 to 2025.
+            You can switch between categories and compare how each crime type is distributed within the year.
+            This makes it easier to inspect whether changes after the stay-at-home orders were broad or category-specific.
+          </p>
+
+          <figure class="figure-block figure-block--interactive">
+            <div class="iframe-frame iframe-frame--chart">
+              <iframe src="assets/interactive-plot.html" title="Interactive monthly crime distribution chart"></iframe>
+            </div>
+            <figcaption>
+              <strong>Figure 2.</strong> Normalized monthly distribution of Personal Focus Crimes (2003–2025).
+              Use the controls in the figure to switch between categories.
+            </figcaption>
+          </figure>
+
+          <p>
+            Crimes that depend strongly on human interaction, such as assault, robbery, and larceny theft,
+            generally declined after stay-at-home orders reduced movement and public contact. Drug offenses also
+            moved downward, but that change likely reflects a mix of behavior and institutional recording effects.
+          </p>
+          <p>
+            Property crimes followed a different pattern. Burglary, vehicle theft, and arson increased in early 2020.
+            Closed businesses, less street activity, and unattended vehicles created different risk conditions than those
+            seen before the pandemic. Vandalism, by contrast, remained relatively stable.
+          </p>
+          <p>
+            This is the main substantive result of the page: the pandemic did not simply reduce crime. It altered the
+            opportunity structure. Some offenses became less feasible, while others became easier.
+          </p>
+        </section>
+
+        <section id="spatial-patterns">
+          <h2>Burglary hotspots shifted as the city emptied</h2>
+          <p>
+            Temporal change is only part of the story. Burglary also changed geographically. The animated heatmap below
+            tracks reported burglary density from January 2019 to December 2021 and shows how hotspots moved before and
+            after the start of the pandemic.
+          </p>
+
+          <figure class="figure-block figure-block--interactive">
+            <div class="iframe-frame iframe-frame--map">
+              <iframe src="assets/burglary-heatmap.html" title="Animated burglary heatmap for San Francisco"></iframe>
+            </div>
+            <figcaption>
+              <strong>Figure 3.</strong> Heatmap of burglary incidents in San Francisco from January 2019 to December 2021.
+            </figcaption>
+          </figure>
+
+          <p>
+            Before 2020, hotspots were concentrated in the downtown core and major commercial districts. After March 2020,
+            the pattern spread more clearly into residential areas. This is consistent with a city in which natural surveillance
+            weakened and offenders shifted toward unattended property.
+          </p>
+          <p>
+            The broader conclusion is that crime is closely linked to routine activity and the urban environment. When the pandemic
+            changed where people worked, moved, and interacted, the spatial and temporal pattern of recorded crime changed with it.
+          </p>
+        </section>
+
+        <section id="notes" class="notes-section">
+          <h2>Notes and reuse</h2>
+          <p>
+            This page is styled to resemble the editorial structure of Our World in Data: a narrow reading column,
+            strong hierarchy, chart-first sections, figure captions, and a simple navigation system. It is not a copy
+            of their branding, logo, or components.
+          </p>
+          <p>
+            To publish this as a personal website, upload the full folder to GitHub Pages, Netlify, Vercel, or any static host.
+            Keep the <code>assets</code> folder together with <code>index.html</code> so the embedded figures continue to load.
+          </p>
+        </section>
+      </article>
+    </div>
+  </main>
+</body>
+</html>
