@@ -1,3 +1,5 @@
+# Update: We have added the notebook for the final project.
+
 # Assignment 2
 
 This repository contains our Assignment 2 submission in the form of a short data story website.
